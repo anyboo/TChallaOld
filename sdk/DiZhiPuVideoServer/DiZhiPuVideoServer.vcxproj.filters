@@ -36,5 +36,8 @@
     <ClInclude Include="..\..\VideoServer\log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Api_DiZhiPu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

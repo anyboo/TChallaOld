@@ -29,6 +29,7 @@
     <IntermediateDirectory>release\</IntermediateDirectory>
     <PrimaryOutput>StartSsd</PrimaryOutput>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'" Label="Configuration">
     <PlatformToolSet>v120</PlatformToolSet>
     <OutputDirectory>D:\work\downloadVideo\bin\</OutputDirectory>
@@ -60,15 +61,15 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\bin\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">$(SolutionDir)..\bin\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+ 
     <IntDir Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Start</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">StartSsd</TargetName>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">true</IgnoreImportLibrary>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">false</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\bin\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
@@ -77,6 +78,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
+      
       <AdditionalIncludeDirectories>.\GeneratedFiles;$(SolutionDir)..\common;$(SolutionDir)..\common\protobuf\include;..\VideoDownloader;$(QTDIR)\include;(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWidgets;..\..\VideoServer;$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -Zc:strictStrings -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
@@ -85,7 +87,6 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_NETWORK_LIB;QT_CORE_LIB;NDEBUG;_CRT_SECURE_NO_WARNINGS;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -95,6 +96,7 @@
       <WarningLevel>Level3</WarningLevel>
     </ClCompile>
     <Link>
+
       <AdditionalDependencies>shell32.lib;libboost_log_setup-vc120-mt-1_57.lib;libboost_log-vc120-mt-1_57.lib;libboost_thread-vc120-mt-1_57.lib;libboost_system-vc120-mt-1_57.lib;libboost_date_time-vc120-mt-1_57.lib;libboost_chrono-vc120-mt-1_57.lib;libboost_filesystem-vc120-mt-1_57.lib;libprotobuf.lib;VirDisk_SageAPI.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Sql.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5Core.lib;$(QTDIR)\lib\qtmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)lib;$(SolutionDir)lib\boostlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
@@ -102,7 +104,6 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
       <LinkIncremental>false</LinkIncremental>
-      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <SubSystem>Windows</SubSystem>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -159,6 +160,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+     
       <AdditionalIncludeDirectories>.\GeneratedFiles;$(SolutionDir)..\common;$(SolutionDir)..\common\protobuf\include;..\VideoDownloader;$(QTDIR)\include;(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWidgets;..\..\VideoServer;$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
@@ -167,6 +169,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <Optimization>Disabled</Optimization>
+     
       <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;_CRT_SECURE_NO_WARNINGS;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -177,12 +180,14 @@
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
+
       <AdditionalDependencies>shell32.lib;libboost_log_setup-vc120-mt-gd-1_57.lib;libboost_log-vc120-mt-gd-1_57.lib;libboost_thread-vc120-mt-gd-1_57.lib;libboost_system-vc120-mt-gd-1_57.lib;libboost_date_time-vc120-mt-gd-1_57.lib;libboost_chrono-vc120-mt-gd-1_57.lib;libboost_filesystem-vc120-mt-gd-1_57.lib;libprotobufd.lib;VirDisk_SageAPI.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Sql.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5Core.lib;$(QTDIR)\lib\qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)lib;$(SolutionDir)lib\boostlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
+
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <SubSystem>Windows</SubSystem>
@@ -280,9 +285,12 @@
     <ClInclude Include="SAGESSDDll.h" />
     <ClInclude Include="..\common\protobuf\SettingInfo.pb.h" />
     <CustomBuild Include="VerifyDialog.h">
+
+
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DVERSION_SSD -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing VerifyDialog.h...</Message>
+ 
       <Message Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">Moc%27ing VerifyDialog.h...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -D_DEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing VerifyDialog.h...</Message>
@@ -296,8 +304,6 @@
     <ClInclude Include="VirDisk_SageAPI.h" />
     <ClInclude Include="customEvent.h" />
     <CustomBuild Include="cwaitdlg.h">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DVERSION_SSD -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing cwaitdlg.h...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">Moc%27ing cwaitdlg.h...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -D_DEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
@@ -324,7 +330,7 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="mainwindow.h">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
+       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DVERSION_SSD -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing mainwindow.h...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">Moc%27ing mainwindow.h...</Message>
@@ -339,9 +345,11 @@
     </CustomBuild>
     <ClInclude Include="..\common\protobuf\pos_request.pb.h" />
     <CustomBuild Include="protobufclient.h">
+
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DVERSION_SSD -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing protobufclient.h...</Message>
+
       <Message Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">Moc%27ing protobufclient.h...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -D_DEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing protobufclient.h...</Message>
@@ -353,9 +361,11 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="qgiflabel.h">
+
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DVERSION_SSD -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qgiflabel.h...</Message>
+
       <Message Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">Moc%27ing qgiflabel.h...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -D_DEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qgiflabel.h...</Message>
@@ -369,6 +379,7 @@
     <ClInclude Include="safedisk.h" />
     <ClInclude Include="settings.h" />
     <CustomBuild Include="singleapllication.h">
+
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='SSD_Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DVERSION_SSD -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG -D_CRT_SECURE_NO_WARNINGS -DQT_DLL  "-I.\GeneratedFiles" "-I$(SolutionDir)..\common" "-I$(SolutionDir)..\common\protobuf\include" "-I.\..\VideoDownloader" "-I$(QTDIR)\include" "-I.\(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\VideoServer" "-I$(SolutionDir)include"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing singleapllication.h...</Message>
@@ -476,6 +487,7 @@
   <ImportGroup Label="ExtensionTargets" />
   <ProjectExtensions>
     <VisualStudio>
+>
       <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="QTDIR" />
     </VisualStudio>
   </ProjectExtensions>
