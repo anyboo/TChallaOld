@@ -39,7 +39,7 @@
     <PrimaryOutput>StartSsd</PrimaryOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <PlatformToolSet>v120</PlatformToolSet>
+    <PlatformToolSet>v120_xp</PlatformToolSet>
     <OutputDirectory>D:\work\downloadVideo\bin\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
